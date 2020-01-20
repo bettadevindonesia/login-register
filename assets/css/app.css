@@ -1,0 +1,38 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.container {
+	height: 100vh;
+	width: 100%;
+}
+.container form {
+	width: 35%;
+	height: 100%;
+	margin: auto;
+}
+.container form .form-group	{
+	padding: 5px 10px;
+}
+.container form .form-group label,
+.container form .form-group input {
+	display: block;
+	font-size: 0.9em;
+	width: 100%;
+	margin: 3px 0;
+	padding: 0.5em 0.2em;
+}
+.container form .btn-register {
+	display: block;
+	width: 100%;
+	padding: 1em 1.5em;
+	margin: 5px;
+	background-color: #222;
+	color: #fff;
+	border: 0px;
+	cursor: pointer;
+}
+.container form p {
+	padding: 1em;
+	text-align: center;
+}
