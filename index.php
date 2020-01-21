@@ -1,44 +1,63 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Aplikasi Registrasi dan Login PHP MySQL</title>
-	<link rel="stylesheet" href="assets/css/app.css">
-</head>
-<body>
-	
-	<div class="container">
-		<form action="actions/do_login.php" method="POST" autocomplete="off">
-			<div class="form-group">
-				<label for="nama_lengkap">Nama Lengkap</label>
-				<input type="text" name="nama_lengkap" placeholder="Masukkan Nama Lengkap Anda..." required>
-			</div>
-			<div class="form-group">
-				<label for="ttl">Tempat, Tanggal Tahun Lahir</label>
-				<input type="text" name="ttl" placeholder="Masukkan Tempat, Tanggal Tahun Lahir Anda..." required>
-			</div>
-			<div class="form-group">
-				<label for="no_telepon">Nomor Telepon</label>
-				<input type="text" name="no_telepon" placeholder="Masukkan Nomor Telepon Anda..." required>
-			</div>
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" name="email" placeholder="Masukkan Email Anda..." required>
-			</div>
-			<div class="form-group">
-				<label for="username">Username</label>
-				<input type="text" name="username" placeholder="Masukkan Username Anda..." required>
-			</div>
-			<div class="form-group">
-				<label for="password">Password</label>
-				<input type="password" name="password" placeholder="Masukkan Password Anda..." required>
-			</div>
-			<button type="submit" class="btn-register">Daftar Sekarang</button>
-			<p>Sudah punya akun? <a href="login.php" title="Login">Login</a></p>
-		</form>
-	</div>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script type="text/javascript" src="assets/js/app.js"></script>
-</body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <h1 class="text-center mt-5">Daftar Artikel Terkini!</h1>
+    <div class="container">
+      
+      <div id="carouselExampleControls" class="carousel slide mb-5" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://loremflickr.com/320/240/dog" class="d-block w-100" style="height: 250px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://loremflickr.com/320/240/cat" class="d-block w-100" style="height: 250px;" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://loremflickr.com/320/240/nature" class="d-block w-100" style="height: 250px;" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="row">
+        <?php for ($i=0; $i < 6; $i++) { ?>
+        <div class="col-sm-12 col-md-4 mb-3">
+          <div class="card">
+            <img src="https://robohash.org/wkwkw0<?= $i ?>" class="card-img-top" alt="Gambar">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <?php } ?>
+      </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
 </html>
